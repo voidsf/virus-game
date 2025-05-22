@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bqo0d1jhxt20r"]
+
+[node name="Start Scene" type="Node2D"]
+
+[node name="User Interface" type="BoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Settings Button" type="Button" parent="User Interface"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Settings"
+
+[node name="Spacer" type="Control" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Menu Container" type="GridContainer" parent="User Interface"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Game Title" type="Label" parent="User Interface/Menu Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Virus Game"
+
+[node name="Start Button" type="Button" parent="User Interface/Menu Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Start Game"
+
+[node name="Quit Button" type="Button" parent="User Interface/Menu Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="Spacer 2" type="Control" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Instagram Button" type="Button" parent="User Interface"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Instagram"

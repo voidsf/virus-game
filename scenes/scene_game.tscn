@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtc1x07lw114w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="User Interface" type="BoxContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+vertical = true
+
+[node name="Settings Button" type="Button" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Settings"
+
+[node name="Spacer" type="Control" parent="User Interface"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Menu" type="BoxContainer" parent="User Interface"]
+layout_mode = 2
+
+[node name="Upgrades Button" type="Button" parent="User Interface/Menu"]
+layout_mode = 2
+text = "Upgrades"
+
+[node name="Hire Button" type="Button" parent="User Interface/Menu"]
+layout_mode = 2
+text = "Hire Goons"

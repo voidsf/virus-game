@@ -6,7 +6,7 @@ You will gain the ability to shut down IT teams temporarily by locking their com
 ## Transmission vectors for viruses
 -	Phishing emails
 -	Worms
--	Physical spreading
+-	Physical spreading (Hiring a hacker team to stick USBs into things)
 -	File infections
 -	Malicious downloads
 -	Open ports
