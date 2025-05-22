@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl0n07ttrqjj"]
+
+[ext_resource type="Script" uid="uid://b43auo7ohn0ot" path="res://scripts/upgrade_list_displayer.gd" id="1_07jxq"]
+[ext_resource type="Script" uid="uid://c8bmxl08u1m0" path="res://scripts/upgrade_manager.gd" id="2_mhsxo"]
+[ext_resource type="Script" uid="uid://cxiuvoiik0ttm" path="res://scripts/player_balance_label.gd" id="2_sisf6"]
+[ext_resource type="Script" uid="uid://7beqvpw2whtn" path="res://scripts/upgrade_description.gd" id="2_yux3m"]
+[ext_resource type="Script" uid="uid://c4qcgkqsb1t05" path="res://scripts/upgrade_scene_back_button.gd" id="3_1r7f5"]
+[ext_resource type="Script" uid="uid://cukc82kjha0ot" path="res://scripts/upgrade_buy_button.gd" id="3_d8g07"]
+
+[node name="SceneUpgrade" type="Node2D"]
+
+[node name="User Interface" type="BoxContainer" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Left Column" type="VBoxContainer" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade List" type="GridContainer" parent="User Interface/Left Column"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_07jxq")
+
+[node name="Balance Label" type="Label" parent="User Interface/Left Column"]
+layout_mode = 2
+script = ExtResource("2_sisf6")
+
+[node name="Back Button" type="Button" parent="User Interface/Left Column"]
+layout_mode = 2
+text = "Back"
+script = ExtResource("3_1r7f5")
+
+[node name="Right Column" type="VBoxContainer" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Upgrade Description" type="RichTextLabel" parent="User Interface/Right Column"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_yux3m")
+
+[node name="Buy Button" type="Button" parent="User Interface/Right Column"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Buy Upgrade: $"
+script = ExtResource("3_d8g07")
+
+[node name="Upgrade Manager" type="Node" parent="."]
+script = ExtResource("2_mhsxo")
+
+[connection signal="pressed" from="User Interface/Left Column/Back Button" to="User Interface/Left Column/Back Button" method="_on_pressed"]
+[connection signal="pressed" from="User Interface/Right Column/Buy Button" to="User Interface/Right Column/Buy Button" method="_on_pressed"]

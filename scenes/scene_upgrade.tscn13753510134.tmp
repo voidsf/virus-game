@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl0n07ttrqjj"]
+
+[ext_resource type="Script" uid="uid://b43auo7ohn0ot" path="res://scripts/upgrade_list_displayer.gd" id="1_07jxq"]
+[ext_resource type="Script" uid="uid://c8bmxl08u1m0" path="res://scripts/upgrade_manager.gd" id="2_mhsxo"]
+[ext_resource type="Script" uid="uid://7beqvpw2whtn" path="res://scripts/upgrade_description.gd" id="2_yux3m"]
+
+[node name="SceneUpgrade" type="Node2D"]
+
+[node name="User Interface" type="BoxContainer" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Upgrade List" type="GridContainer" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_07jxq")
+
+[node name="Upgrade Description" type="RichTextLabel" parent="User Interface"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_yux3m")
+
+[node name="Upgrade Manager" type="Node" parent="."]
+script = ExtResource("2_mhsxo")

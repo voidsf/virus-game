@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c826avnmbkgus"]
+
+[ext_resource type="Script" uid="uid://dflqxheihd7ux" path="res://scripts/prefab_upgrade_button.gd" id="1_1h6cv"]
+
+[node name="Upgrade Button" type="Button"]
+script = ExtResource("1_1h6cv")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

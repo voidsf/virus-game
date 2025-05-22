@@ -1,10 +1,16 @@
-[gd_scene format=3 uid="uid://dtc1x07lw114w"]
+[gd_scene load_steps=3 format=3 uid="uid://dtc1x07lw114w"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" uid="uid://b2xwh50v45d5y" path="res://scripts/upgrades_button.gd" id="1_1bfyv"]
+[ext_resource type="Script" uid="uid://dvev1ol4ewptl" path="res://scripts/view_manager.gd" id="2_6ecnt"]
+
+[node name="Game Scene" type="Node2D"]
+
+[node name="ViewManager" type="Node2D" parent="."]
+script = ExtResource("2_6ecnt")
 
 [node name="User Interface" type="BoxContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 640.0
+offset_bottom = 480.0
 vertical = true
 
 [node name="Settings Button" type="Button" parent="User Interface"]
@@ -22,7 +28,10 @@ layout_mode = 2
 [node name="Upgrades Button" type="Button" parent="User Interface/Menu"]
 layout_mode = 2
 text = "Upgrades"
+script = ExtResource("1_1bfyv")
 
 [node name="Hire Button" type="Button" parent="User Interface/Menu"]
 layout_mode = 2
 text = "Hire Goons"
+
+[connection signal="pressed" from="User Interface/Menu/Upgrades Button" to="User Interface/Menu/Upgrades Button" method="_on_pressed"]

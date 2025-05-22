@@ -1,10 +1,12 @@
-[gd_scene format=3 uid="uid://bqo0d1jhxt20r"]
+[gd_scene load_steps=2 format=3 uid="uid://bqo0d1jhxt20r"]
+
+[ext_resource type="Script" uid="uid://dxkyy2fps6ydp" path="res://scripts/start_button.gd" id="1_yeq8t"]
 
 [node name="Start Scene" type="Node2D"]
 
 [node name="User Interface" type="BoxContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 640.0
+offset_bottom = 480.0
 
 [node name="Settings Button" type="Button" parent="User Interface"]
 layout_mode = 2
@@ -30,6 +32,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Start Game"
+script = ExtResource("1_yeq8t")
 
 [node name="Quit Button" type="Button" parent="User Interface/Menu Container"]
 layout_mode = 2
@@ -44,3 +47,5 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_vertical = 8
 text = "Instagram"
+
+[connection signal="pressed" from="User Interface/Menu Container/Start Button" to="User Interface/Menu Container/Start Button" method="_on_pressed"]

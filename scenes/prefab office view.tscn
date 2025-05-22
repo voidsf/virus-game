@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://d15gc2nqival"]
+
+[ext_resource type="Texture2D" uid="uid://lg7ulhq18i4q" path="res://assets/tempimg_topdown_office.jpg" id="1_cakn8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cakn8"]
+radius = 125.782
+
+[node name="PrefabOfficeView" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.10948, 1.20343)
+texture = ExtResource("1_cakn8")
+centered = false
+
+[node name="Computer 1" type="Area2D" parent="."]
+position = Vector2(161, 371)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer 1"]
+shape = SubResource("CircleShape2D_cakn8")
+
+[node name="Polygon2D" type="Polygon2D" parent="Computer 1"]
+position = Vector2(-11, 24)
+scale = Vector2(0.727977, 0.727977)
+color = Color(0.223529, 1, 0.227451, 1)
+polygon = PackedVector2Array(-68, -5, -68, -29, -55, -46, -38, -52, -16, -44, -5, -23, -6, -3, -24, 12, -44, 17)
+
+[node name="Label" type="Label" parent="Computer 1"]
+offset_top = -57.0
+offset_right = 52.0
+offset_bottom = -34.0
+text = "Access"
